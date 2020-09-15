@@ -1,0 +1,538 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+  font-size: 5.33333vw
+}
+
+@media screen and(max-width: 320px) {
+  html {
+    font-size: 17.06667px
+  }
+}
+
+@media screen and(max-width: 540px) {
+  html {
+    font-size: 28.8px
+  }
+}
+
+body {
+  max-width: 1080px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+div {
+  box-sizing: border-box
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.content {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.mainContent {
+  width: 100%;
+  height: 1600px;
+}
+
+/* 顶部开始 */
+
+.top {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+
+.top>ul {
+  width: 100%;
+}
+
+.top div {
+  background-color: #333;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+  float: left;
+}
+
+.top .closeTop {
+  color: #999;
+  width: 8%;
+}
+
+.top .icon {
+  width: 10%;
+}
+
+.top .icon>img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.top .content {
+  width: 57%;
+}
+
+.top .mop {
+  width: 25%;
+  background-color: #f63515;
+}
+
+/* 顶部结束 */
+
+/* 搜索框开始 */
+
+.searchWrapper {
+  /* position: sticky; */
+  /* position: relative; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 44px;
+  overflow: hidden;
+  background-color: #c82519;
+  z-index: 9999;
+  transition: all .3s;
+}
+
+.searchWrapper::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.listIcon {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 18px;
+  margin: 14px 0 0 15px;
+  background: url(../images/searchLeftIcon.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.searchBar {
+  position: relative;
+  height: 30px;
+  margin: 7px 55px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.login {
+  position: absolute;
+  width: 45px;
+  height: 44px;
+  right: 0;
+  top: 0;
+  line-height: 44px;
+  color: #fff;
+}
+
+.leftJd {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 15px;
+  background: url(../images/searchLeftJd.png) no-repeat;
+  background-size: 20px 15px;
+  margin: 8px 0 8px 15px;
+}
+
+.leftJd::after {
+  content: '';
+  height: 16px;
+  left: 42px;
+  position: absolute;
+  display: inline-block;
+  border-right: 1px solid #999;
+}
+
+.middIcon {
+  display: block;
+  float: left;
+  width: 18px;
+  height: 15px;
+  background: url(../images/jd-sprites.png) no-repeat;
+  background-position: -80px 0;
+  background-size: 200px;
+  margin: 8px 0 0 15px;
+}
+
+.searchInput {
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 10px 0 68px;
+  box-sizing: border-box;
+}
+
+.searchInput>input {
+  border: 0;
+  outline: none;
+  padding-left: 5px;
+  margin: 8px 0 0 5px;
+  font-size: 12px;
+  height: auto;
+  line-height: 16px;
+  color: #232326;
+}
+
+.sliderBg {
+  position: absolute;
+  left: -25%;
+  width: 150%;
+  height: 7.25rem;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background: linear-gradient(0deg, #f1503b, #c82519 50%);
+}
+
+/* 搜索框结束 */
+
+/* 轮播图开始 */
+
+.slideWrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  /* height: 187px; */
+  overflow: hidden;
+}
+
+.slideWrapper::before {
+  content: '';
+  display: block;
+  height: 44px;
+  background-color: #c82519;
+}
+
+.newSlide {
+  position: relative;
+  height: 8rem;
+  z-index: 1;
+}
+
+.newSlide>li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 8rem;
+  top: 0;
+}
+
+.newSlide>li>a {
+  display: block;
+  width: calc(100% - 1.25rem);
+  height: 7rem;
+  margin: 0 auto;
+  top: .25rem;
+  position: relative;
+  border-radius: .35rem;
+}
+
+.newSlide>li>a>img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.focusBtn {
+  position: absolute;
+  width: 100%;
+  bottom: 1.25rem;
+  text-align: center;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.focusBtn>span {
+  box-sizing: border-box;
+  width: 8px;
+  height: 3px;
+  border-radius: 7px;
+  margin: 0 2px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.focusBtn>.active {
+  background-color: #ededed;
+  width: 12px;
+}
+
+/* 轮播图结束 */
+
+/* 轮播图下的固定广告开始 */
+
+.floor {
+  position: relative;
+}
+
+.floor>.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 5rem;
+}
+
+.floor>.banner>img {
+  width: 100%;
+  height: auto;
+}
+
+/* 广告结束 */
+
+/* 功能项目开始 */
+
+.boxWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.floorItem {
+  width: 100%;
+  height: 8.1rem;
+}
+
+.floorItem>a {
+  width: 20%;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.floorItem>a img {
+  width: 2rem;
+  margin-top: .5rem;
+}
+
+.floorItem>a p {
+  color: #666;
+}
+
+.floorItemPagination {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+}
+
+.floorItemPagination>b {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .2);
+  display: inline-block;
+}
+
+.floorItemPagination>b[class=cur] {
+  width: 10px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, .4);
+  display: inline-block;
+}
+
+/* 功能项目结束 */
+
+/* 秒杀模块开始 */
+
+.secKill {
+  width: 100%;
+}
+
+.secKillContainer {
+  margin: .5rem;
+  background-color: #fff;
+}
+
+.secTop {
+  height: 1.7rem;
+  background: url(../images/secKillTop.png);
+  background-size: contain;
+  vertical-align: middle;
+  line-height: 1.7rem;
+  padding-top: .5rem;
+}
+
+.secTop>a:nth-child(1) {
+  float: left;
+}
+
+.secTop>a:nth-child(2) {
+  color: #f23030;
+  font-size: .6rem;
+  padding-right: 1.2rem;
+  line-height: 1.7;
+  float: right;
+}
+
+.secKillTitle {
+  float: left;
+  height: 1.35rem;
+  font-size: .7rem;
+  line-height: 1.2rem;
+  margin-left: .5rem;
+}
+
+.secKillTimer {
+  height: .9rem;
+  border: 1px solid #f2270c;
+  margin-top: .1rem;
+  padding-right: .25rem;
+  border-radius: .4rem;
+  float: left;
+  vertical-align: middle;
+}
+
+.secTimerClock {
+  position: relative;
+  left: -1px;
+  height: 100%;
+  color: #fff;
+  float: left;
+  background: linear-gradient(90deg, #f10001, #fe4e18);
+  border-radius: .4rem;
+  padding: 0 0.25rem;
+  font-size: .6rem;
+  line-height: 1.4;
+}
+
+.secTime {
+  height: 100%;
+  float: right;
+  margin-left: .2rem;
+  color: #f2270c;
+  font-weight: 700;
+  font-size: .6rem;
+  line-height: 1.4;
+}
+
+.secTop>a:nth-child(2) i {
+  display: inline-block;
+  width: .55rem;
+  height: .55rem;
+  background: url(../images/arrow_rt.png);
+  background-size: cover;
+}
+
+.secKillSlider {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.secKillSlider::-webkit-scrollbar {
+  display: none;
+}
+
+.secKillSlider>ul {
+  width: 770px;
+  transition: all .3s ease;
+}
+
+.secKillSlider li {
+  float: left;
+  width: 76px;
+}
+
+.secKillItemImg {
+  width: 100%;
+  padding: 0 0.25rem;
+}
+
+.secKillItemImg a {
+  display: inline-block;
+}
+
+.secKillItemImg img {
+  width: 100%;
+}
+
+.secKillItemPrice {
+  width: 100%;
+  padding: 0 0.25rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.secKillItemPrice span:nth-child(1) {
+  color: #f2270c;
+  font-size: .7rem;
+  line-height: .7rem;
+}
+
+.secKillItemPrice span:nth-child(2) {
+  color: #999;
+  font-size: .6rem;
+  line-height: .6rem;
+  text-decoration: line-through;
+}
+
+/* 秒杀模块结束 */
+
+/* 新人福利模块开始 */
+
+.newCustomer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.newCustomerContainer {
+  position: relative;
+  margin: .5rem;
+  height: 6rem;
+}
+
+.newCustomerContainer>div {
+  width: 50%;
+  height: 6rem;
+  float: left;
+}
+
+.newCustomerContainer>div img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 新人福利模块结束 */
